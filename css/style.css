@@ -83,6 +83,10 @@ h2 {
     letter-spacing: 3px;
     margin: 12px 0 35px; /* Отступы верх:12, лево/право:0, низ:35 */
 }
+    /* Красное слово в заголовке */
+    h2 span {
+        color: #d32f2f;
+    }
 
 /* Обычный текст */
 p {
@@ -405,42 +409,3 @@ input[type="password"] {
         /* Затемняет изображение */
         filter: brightness(.65);
     }
-
-/* Странно что для номера кейса отдельный класс, СДЕЛАТЬ ПО_ДРУГОМУ!!! */
-.case-number {
-    color: #c62828;
-    font-size: 30px;
-    font-weight: 700; /* Жирность */
-    margin-bottom: 15px; /* Отступ после текста */
-}
-
-/* Заголовок ПОЧЕМУ НЕЛЬЗЯ ПРОСТО Н1 ??? 
-.left-column h1 {
-    font-family: "Bebas Neue",sans-serif;
-    font-size: 130px;
-    line-height: .9; /* Расстояние между строками 
-}
-    /* Красное слово в заголовке 
-    .left-column h1 span {
-        color: #d32f2f;
-    }*/
-
-/* Подзаголовок 
-.subtitle {
-    font-family: "Bebas Neue",sans-serif;
-    font-size: 42px;
-    letter-spacing: 3px;
-    margin: 12px 0 35px; /* Отступы верх:12, лево/право:0, низ:35 
-}*/
-
-/* Обычный текст 
-.left-column p {
-    /* Ограничение ширины текста 
-    width: 620px;
-    /* Межстрочный интервал 
-    line-height: 1.8;
-    color: #bdbdbd;
-    font-size: 20px;
-    /* Отступ после текста 
-    margin-bottom: 45px;
-}*/
