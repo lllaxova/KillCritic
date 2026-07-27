@@ -3,6 +3,7 @@
 ========================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+JP+N&display=swap');
 
 /* ==========================================
    ОБЩИЕ НАСТРОЙКИ ДЛЯ ВСЕГО САЙТА
@@ -21,7 +22,7 @@ html, body {
     height: 100%;
     background: #070707;
     color: #fff;
-    font-family: "Inter", sans-serif;
+    font-family: "WDXL Lubrifont JP N", sans-serif;
     /* Настройки скроллбара */
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none; /* Internet Explorer / старый Edge */
@@ -60,6 +61,42 @@ body::-webkit-scrollbar {
     background: url("../img/background1.jpg");
     /* Затемняет изображение */
     filter: brightness(.85);
+}
+
+/* ==========================================
+   СТИЛИ ТЕКСТА
+========================================== */
+
+/* Заголовок h1 */
+h1 {
+    font-family: "Bebas Neue",sans-serif;
+    font-size: 130px;
+    line-height: .9; /* Расстояние между строками */
+}
+    /* Красное слово в заголовке */
+    h1 span {
+        color: #d32f2f;
+    }
+
+/* Заголовок h2 */
+h2 {
+    font-family: "Bebas Neue",sans-serif;
+    font-size: 42px;
+    letter-spacing: 3px;
+    margin: 12px 0 35px; /* Отступы верх:12, лево/право:0, низ:35 */
+}
+
+/* Обычный текст */
+p {
+    font-family: "WDXL Lubrifont JP N",sans-serif;
+    /* Ограничение ширины текста */
+    width: 620px;
+    /* Межстрочный интервал */
+    line-height: 1.8;
+    color: #bdbdbd;
+    font-size: 20px;
+    /* Отступ после текста */
+    margin-bottom: 45px;
 }
 
 /* ==========================================
@@ -122,50 +159,6 @@ body::-webkit-scrollbar {
     /* Размывает фон, который находится за окном. Благодаря этому окно выглядит как матовое стекло */
     backdrop-filter: blur(8px);
 }
-
-/* ==========================================
-   СТИЛИ ТЕКСТА
-========================================== */
-
-/* Стиль применяется ко всем заголовкам <h2> 
-h2 {
-    /* Отступ снизу 25 пикселей. Создает расстояние между заголовком и полем ввода 
-    margin-bottom: 25px;
-    /* Размер шрифта заголовка
-    font-size: 28px;
-} */
-
-/* Заголовок h1 */
-h1 {
-    font-family: "Bebas Neue",sans-serif;
-    font-size: 130px;
-    line-height: .9; /* Расстояние между строками */
-}
-    /* Красное слово в заголовке */
-    h1 span {
-        color: #d32f2f;
-    }
-
-/* Заголовок h2 */
-h2 {
-    font-family: "Bebas Neue",sans-serif;
-    font-size: 42px;
-    letter-spacing: 3px;
-    margin: 12px 0 35px; /* Отступы верх:12, лево/право:0, низ:35 */
-}
-
-/* Обычный текст */
-p {
-    /* Ограничение ширины текста */
-    width: 620px;
-    /* Межстрочный интервал */
-    line-height: 1.8;
-    color: #bdbdbd;
-    font-size: 20px;
-    /* Отступ после текста */
-    margin-bottom: 45px;
-}
-
 
 /* ==========================================
    ПОЛЕ ВВОДА
