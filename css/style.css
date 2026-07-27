@@ -48,6 +48,7 @@ html, body {
 .start-page{background-image:url("../img/start_screen.jpg");}
 .password-page{background-image:url("../img/password.jpg");}
 .desktop-page{background-image:url("../img/desktop.png");}
+.case-page {background: linear-gradient(90deg,#090909 0%,#090909 58%,#111 100%);}
 
 /* ==========================================
    ОБЩИЕ ССЫЛКИ
@@ -294,27 +295,33 @@ input[type="password"] {
    MAIN.HTML
 ========================================== */
 
-.case-page {
-    background: linear-gradient(90deg,#090909 0%,#090909 58%,#111 100%);
-}
-
+/* Контейнер состоит из .logo и .menu */
 .top-panel {
+    /* Элемент позиционируется относительно ближайшего родителя или относительно окна браузера */
     position: absolute;
     top: 35px;
     left: 60px;
-    right: 60px;
+    right: 45%; /* как размер .right-column */
+    /* Все элементы внутри .top-panel становятся flex-элементами и располагаются в одну линию */
     display: flex;
+    /* Распределяет свободное место между элементами */
     justify-content: space-between;
+    /* Выравнивание элементов по вертикали */
     align-items: center;
+    /* Номер слоя */
     z-index: 5;
 }
 
 .logo {
+    /* Шрифт, запасной шрифт, если не загрузится основной */
     font-family: "Bebas Neue",sans-serif;
+    /* Размер шрифта */
     font-size: 42px;
+    /* Расстояние между буквами */
     letter-spacing: 2px;
 }
 
+    /* Красная часть логотипа */
     .logo span {
         color: #c62828;
     }
@@ -324,18 +331,25 @@ input[type="password"] {
     gap: 42px;
 }
 
+    /* Применяется ко всем ссылкам внутри меню */
     .menu a {
         color: #d7d7d7;
+        /* Убирает стандартное подчёркивание ссылок */
         text-decoration: none;
+        /* Все буквы становятся большими */
         text-transform: uppercase;
+        /* Расстояние между буквами */
         letter-spacing: 2px;
+        /* Добавляет плавную анимацию изменения */
         transition: .25s;
     }
 
+        /* Наведение мышки */
         .menu a:hover {
             color: #d32f2f;
         }
 
+/* Главный контейнер страницы состоит из .left-column и .right-column */
 .case-content {
     display: flex;
     width: 100%;
@@ -344,49 +358,60 @@ input[type="password"] {
 
 .left-column {
     width: 55%;
+    /* Отступы: верх право низ лево */
     padding: 170px 0 0 110px;
 }
 
 .right-column {
     width: 45%;
+    /* Обрезает всё, что выходит за пределы блока */
     overflow: hidden;
 }
 
     .right-column img {
         width: 100%;
         height: 100%;
+        /* Заполни весь блок картинкой, сохранив пропорции */
         object-fit: cover;
+        /* Затемняет изображение */
         filter: brightness(.65);
     }
 
+/* Странно что для номера кейса отдельный класс, СДЕЛАТЬ ПО_ДРУГОМУ!!! */
 .case-number {
     color: #c62828;
     font-size: 30px;
-    font-weight: 700;
-    margin-bottom: 15px;
+    font-weight: 700; /* Жирность */
+    margin-bottom: 15px; /* Отступ после текста */
 }
 
+/* Заголовок ПОЧЕМУ НЕЛЬЗЯ ПРОСТО Н1 ??? */
 .left-column h1 {
     font-family: "Bebas Neue",sans-serif;
     font-size: 130px;
-    line-height: .9;
+    line-height: .9; /* Расстояние между строками */
 }
-
+    /* Красное слово в заголовке */
     .left-column h1 span {
         color: #d32f2f;
     }
 
+/* Подзаголовок */
 .subtitle {
     font-family: "Bebas Neue",sans-serif;
     font-size: 42px;
     letter-spacing: 3px;
-    margin: 12px 0 35px;
+    margin: 12px 0 35px; /* Отступы верх:12, лево/право:0, низ:35 */
 }
 
+/* Обычный текст */
 .left-column p {
+    /* Ограничение ширины текста */
     width: 620px;
+    /* Межстрочный интервал */
     line-height: 1.8;
     color: #bdbdbd;
     font-size: 20px;
+    /* Отступ после текста */
     margin-bottom: 45px;
 }
