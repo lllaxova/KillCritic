@@ -59,7 +59,7 @@ body::-webkit-scrollbar {
 .case-page {
     background: url("../img/background1.jpg");
     /* Затемняет изображение */
-    filter: brightness(.65);
+    filter: brightness(.85);
 }
 
 /* ==========================================
