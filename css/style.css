@@ -4,6 +4,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+JP+N&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&family=WDXL+Lubrifont+JP+N&display=swap');
 
 /* ==========================================
    ОБЩИЕ НАСТРОЙКИ ДЛЯ ВСЕГО САЙТА
@@ -22,7 +23,7 @@ html, body {
     height: 100%;
     background: #070707;
     color: #fff;
-    font-family: "WDXL Lubrifont JP N", sans-serif;
+    font-family: "WDXL Lubrifont JP N",sans-serif;
     /* Настройки скроллбара */
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none; /* Internet Explorer / старый Edge */
@@ -68,8 +69,10 @@ body::-webkit-scrollbar {
 /* Заголовок h1 */
 h1 {
     font-family: "Bebas Neue",sans-serif;
-    font-size: 130px;
-    line-height: .9; /* Расстояние между строками */
+    font-size: 70px;
+    letter-spacing: 0.5px;
+    /*line-height: .9;  Расстояние между строками */
+    margin: 12px 0 35px; /* Отступы верх:12, лево/право:0, низ:35 */
 }
     /* Красное слово в заголовке */
     h1 span {
@@ -80,8 +83,7 @@ h1 {
 h2 {
     font-family: "WDXL Lubrifont JP N",sans-serif;
     font-size: 42px;
-    letter-spacing: 3px;
-    margin: 12px 0 35px; /* Отступы верх:12, лево/право:0, низ:35 */
+    margin: 12px 0 12px; /* Отступы верх:12, лево/право:0, низ:35 */
 }
     /* Красное слово в заголовке */
     h2 span {
@@ -92,7 +94,7 @@ h2 {
 p {
     font-family: "WDXL Lubrifont JP N",sans-serif;
     /* Ограничение ширины текста */
-    width: 620px;
+    width: 600px;
     /* Межстрочный интервал */
     line-height: 1.8;
     color: #bdbdbd;
@@ -201,6 +203,7 @@ input[type="password"] {
 ========================================== */
 
 .button {
+    font-family: "WDXL Lubrifont JP N",sans-serif;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -242,17 +245,18 @@ input[type="password"] {
 
 /* Стартовая страница. Кнопка*/
 .start-button {
+    font-family: "WDXL Lubrifont JP N",sans-serif;
     /* Абсолютное позиционирование */
     position: absolute;
     /* Отступ слева */
     left: 8%;
     /* Отступ снизу */
     bottom: 12%;
-    /* Цвет кнопки */
 }
 
 /* Кнопка "Войти" */
 .login-button {
+    font-family: "WDXL Lubrifont JP N",sans-serif;
     width: 100%;
     padding: 15px;
     font-size: 20px;
@@ -272,7 +276,7 @@ input[type="password"] {
 }
 
 /* ==========================================
-   Иконки
+   ИКОНКИ
 ========================================== */
 .desktop-icon {
     width: 90px;
@@ -332,6 +336,7 @@ input[type="password"] {
 .top-panel {
     /* Элемент позиционируется относительно ближайшего родителя или относительно окна браузера */
     position: absolute;
+    font-family: "WDXL Lubrifont JP N",sans-serif;
     top: 35px;
     left: 5%;
     right: 45%;
