@@ -59,8 +59,6 @@ body::-webkit-scrollbar {
 .desktop-page{background-image:url("../img/desktop.png");}
 .case-page {
     background: url("../img/background1.jpg");
-    /* Затемняет изображение */
-    filter: brightness(.85);
 }
 
 /* ==========================================
