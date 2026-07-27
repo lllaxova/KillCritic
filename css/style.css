@@ -56,7 +56,7 @@ body::-webkit-scrollbar {
 .start-page{background-image:url("../img/start_screen.jpg");}
 .password-page{background-image:url("../img/password.jpg");}
 .desktop-page{background-image:url("../img/desktop.png");}
-.case-page {background: linear-gradient(90deg,#090909 0%,#090909 58%,#111 100%);}
+.case-page {background: url("../img/background1.jpg");}
 
 /* ==========================================
    ОБЩИЕ ССЫЛКИ
