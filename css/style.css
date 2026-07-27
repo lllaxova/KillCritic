@@ -300,7 +300,7 @@ input[type="password"] {
     position: absolute;
     top: 35px;
     left: 60px;
-    right: 45%; /* как размер .right-column */
+    right: 60px;
     /* Все элементы внутри .top-panel становятся flex-элементами и располагаются в одну линию */
     display: flex;
     /* Распределяет свободное место между элементами */
