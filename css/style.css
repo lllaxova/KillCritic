@@ -56,7 +56,11 @@ body::-webkit-scrollbar {
 .start-page{background-image:url("../img/start_screen.jpg");}
 .password-page{background-image:url("../img/password.jpg");}
 .desktop-page{background-image:url("../img/desktop.png");}
-.case-page {background: url("../img/background1.jpg");}
+.case-page {
+    background: url("../img/background1.jpg");
+    /* Затемняет изображение */
+    filter: brightness(.65);
+}
 
 /* ==========================================
    ОБЩИЕ ССЫЛКИ
