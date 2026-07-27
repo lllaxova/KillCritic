@@ -1,4 +1,10 @@
 ﻿/* ==========================================
+   KILLCRITIC STYLE.CSS
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Bebas+Neue&display=swap');
+
+/* ==========================================
    ОБЩИЕ НАСТРОЙКИ ДЛЯ ВСЕГО САЙТА
 ========================================== */
 
@@ -7,15 +13,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Настройки страницы */
-html,
-body {
+html, body {
     width: 100%;
     height: 100%;
     overflow: hidden;
+    background: #070707;
+    color: #fff;
+    font-family: "Inter",sans-serif;
 }
 
 /* ==========================================
@@ -23,34 +30,40 @@ body {
 ========================================== */
 
 .page {
-    /* Заполнить весь экран и растянуть без обрезки */
+    /* Заполнить весь экран */
     background-size: 100% 100%;
     /* Центрировать */
-    background-position: center;
+    background-position: top center;
     /* Не повторять изображение */
     background-repeat: no-repeat;
-    /* Занимать весь экран */
-    width: 100%;
-    height: 100vh;
+    /* растянуть по ширине, сохранить пропорции,
+       если картинка выше экрана — обрезать снизу */
+    background-size: 100% auto;
 }
 
-/* Стартовая страница */
-.start-page {
-    background-image: url("../img/start_screen.jpg");
+/* ==========================================
+   ФОНЫ
+========================================== */
+
+.start-page{background-image:url("../img/start_screen.jpg");}
+.password-page{background-image:url("../img/password.jpg");}
+.desktop-page{background-image:url("../img/desktop.png");}
+
+/* ==========================================
+   ОБЩИЕ ССЫЛКИ
+========================================== */
+
+.text-link {
+    color: #d8d8d8;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: .25s;
 }
 
-/* Страница ввода пароля */
-.password-page {
-    background-image: url("../img/password.jpg");
-}
-
-/* Рабочий стол */
-.desktop-page {
-    /* Фоновое изображение рабочего стола */
-    background-image: url("../img/desktop.png");
-    font-family: Arial, sans-serif;
-    color: white;
-}
+    .text-link:hover {
+        color: #d32f2f;
+    }
 
 /* ==========================================
    ОКНО ВВОДА ПАРОЛЯ
@@ -150,20 +163,23 @@ input[type="password"] {
     }
 
 /* ==========================================
-   КНОПКА
+   КНОПКИ
 ========================================== */
 
 .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     /* Цвет кнопки */
     background: #c62828;
     /* Цвет текста */
-    color: white;
+    color: #fff;
     /* Убираем подчеркивание ссылки */
     text-decoration: none;
     /* Размер текста */
-    font-size: 30px;
+    font-size: 22px;
     /* Жирный текст */
-    font-weight: bold;
+    font-weight: 700;
     /* Внутренние отступы */
     padding: 18px 55px;
     /* Скругление углов */
@@ -172,7 +188,7 @@ input[type="password"] {
     box-shadow: 0 8px 20px rgba(0,0,0,.35);
     /* Плавная анимация */
     transition: .25s;
-    display: inline-block;
+    display: inline-flex;
     text-align: center;
     cursor: pointer;
 }
@@ -272,4 +288,105 @@ input[type="password"] {
 
 .telegram {
     background-image: url("../img/icons/telegram.png");
+}
+
+/* ==========================================
+   MAIN.HTML
+========================================== */
+
+.case-page {
+    background: linear-gradient(90deg,#090909 0%,#090909 58%,#111 100%);
+}
+
+.top-panel {
+    position: absolute;
+    top: 35px;
+    left: 60px;
+    right: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+}
+
+.logo {
+    font-family: "Bebas Neue",sans-serif;
+    font-size: 42px;
+    letter-spacing: 2px;
+}
+
+    .logo span {
+        color: #c62828;
+    }
+
+.menu {
+    display: flex;
+    gap: 42px;
+}
+
+    .menu a {
+        color: #d7d7d7;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        transition: .25s;
+    }
+
+        .menu a:hover {
+            color: #d32f2f;
+        }
+
+.case-content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.left-column {
+    width: 55%;
+    padding: 170px 0 0 110px;
+}
+
+.right-column {
+    width: 45%;
+    overflow: hidden;
+}
+
+    .right-column img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(.65);
+    }
+
+.case-number {
+    color: #c62828;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.left-column h1 {
+    font-family: "Bebas Neue",sans-serif;
+    font-size: 130px;
+    line-height: .9;
+}
+
+    .left-column h1 span {
+        color: #d32f2f;
+    }
+
+.subtitle {
+    font-family: "Bebas Neue",sans-serif;
+    font-size: 42px;
+    letter-spacing: 3px;
+    margin: 12px 0 35px;
+}
+
+.left-column p {
+    width: 620px;
+    line-height: 1.8;
+    color: #bdbdbd;
+    font-size: 20px;
+    margin-bottom: 45px;
 }
