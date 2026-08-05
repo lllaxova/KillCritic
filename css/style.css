@@ -40,15 +40,9 @@ body::-webkit-scrollbar {
 ========================================== */
 
 .page {
-    /* Заполнить весь экран */
-    background-size: 100% 100%;
-    /* Центрировать */
-    background-position: top center;
-    /* Не повторять изображение */
+    background-size: cover;
+    background-position: center top;
     background-repeat: no-repeat;
-    /* растянуть по ширине, сохранить пропорции,
-       если картинка выше экрана — обрезать снизу */
-    background-size: 100% auto;
 }
 
 /* ==========================================
@@ -58,20 +52,17 @@ body::-webkit-scrollbar {
 .start-page{background-image:url("../img/start_screen.jpg");}
 .password-page{background-image:url("../img/password.jpg");}
 .desktop-page{background-image:url("../img/desktop.png");}
-.case-page {
-    background: url("../img/background1.jpg");
-}
+.case-page {background-image: url("../img/background1.jpg");}
 
 /* ==========================================
    СТИЛИ ТЕКСТА
 ========================================== */
-
 /* Заголовок h1 */
 h1 {
     font-family: "Bebas Neue",sans-serif;
     font-size: 70px;
     letter-spacing: 0.5px;
-    /*line-height: .9;  Расстояние между строками */
+    line-height: .9; /* Расстояние между строками */
     margin: 12px 0 35px; /* Отступы верх:12, лево/право:0, низ:35 */
 }
     /* Красное слово в заголовке */
@@ -96,11 +87,11 @@ p {
     /* Ограничение ширины текста */
     width: 600px;
     /* Межстрочный интервал */
-    line-height: 1.8;
+    line-height: 1.3;
     color: #bdbdbd;
     font-size: 20px;
-    /* Отступ после текста */
-    margin-bottom: 45px;
+    /* Отступ после текста
+    margin-bottom: 45px;*/
 }
 
 /* ==========================================
@@ -249,7 +240,7 @@ input[type="password"] {
     /* Абсолютное позиционирование */
     position: absolute;
     /* Отступ слева */
-    left: 8%;
+    left: 7.5%;
     /* Отступ снизу */
     bottom: 12%;
 }
